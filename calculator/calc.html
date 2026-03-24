@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc_stylesheet.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="screen" readonly>
+            <div id="history" class="history"></div>
+        </div>
+        <div class="buttons">
+            <button class="btn function" onclick="memoryClear()">MC</button>
+            <button class="btn function" onclick="memoryRecall()">MR</button>
+            <button class="btn clear ac" onclick="clearScreen()">AC</button>
+            <button class="btn clear" onclick="deleteLast()">⌫</button>
+            
+            <button class="btn function" onclick="toggleSign()">+/-</button>
+            <button class="btn function" onclick="appendToScreen('%')">%</button>
+            <button class="btn function" onclick="appendToScreen('/')">/</button>
+            <button class="btn operator" onclick="appendToScreen('*')">×</button>
+            
+            <button class="btn number" onclick="appendToScreen('7')">7</button>
+            <button class="btn number" onclick="appendToScreen('8')">8</button>
+            <button class="btn number" onclick="appendToScreen('9')">9</button>
+            <button class="btn operator" onclick="appendToScreen('-')">-</button>
+            
+            <button class="btn number" onclick="appendToScreen('4')">4</button>
+            <button class="btn number" onclick="appendToScreen('5')">5</button>
+            <button class="btn number" onclick="appendToScreen('6')">6</button>
+            <button class="btn operator" onclick="appendToScreen('+')">+</button>
+            
+            <button class="btn number" onclick="appendToScreen('1')">1</button>
+            <button class="btn number" onclick="appendToScreen('2')">2</button>
+            <button class="btn number" onclick="appendToScreen('3')">3</button>
+            <button class="btn equals" onclick="calculate()" rowspan="2">=</button>
+            
+            <button class="btn number zero" onclick="appendToScreen('0')">0</button>
+            <button class="btn number" onclick="appendToScreen('.')">.</button>
+            <button class="btn function" onclick="square()">x²</button>
+            <button class="btn function" onclick="sqrt()">√</button>
+        </div>
+    </div>
+    <script src="calc_javacript.js"></script>
+</body>
+</html>
